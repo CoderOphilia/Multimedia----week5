@@ -76,5 +76,6 @@ img{
     
     position: absolute;
     /* clip: rect(50px, 150px, 150px, 50px); */
+    clip-path: inset(50px, 150px, 150px, 50px);
     z-index: -1;
 }
