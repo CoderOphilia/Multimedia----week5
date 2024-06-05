@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+.container1{
+    display: grid;
+    background-color: aqua;
+    outline: 5px solid red;
+    /*how many columns this grid should have*/
+    /* grid-template-columns: 200px repeat(2,2fr 1fr); 
+    */
+    /* grid-template-columns: 100px 100px 100px; This is to make the content work with the justify content */
+    grid-template-rows: 4fr 2fr 2fr;
+    /* column-gap: 20px; */
+    gap: 20px 20px;
+    padding: 10px;
+    /* justify-content: center; */
+}
+
+.container1 > div{
+    background-color: antiquewhite;
+    /* border: 5px solid blue; */
+    outline: 5px dotted blueviolet;
+    font-size: 30px;
+    padding: 10px;
+    text-align: center;
+    align-content: center;
+}
+
+.item1{
+     grid-column-start: 1;
+    grid-column-end: 3; 
+    grid-column:span 2;
+}
+
+.item5{
+    grid-row-start: 2;
+    grid-row-end:4; 
+    grid-row: span 2;
+}
+
+/*
+.item4{
+    grid-area: 2/1/4/3; /*Trying to cover the 2nd, 3rd row and and 1 and 2nd column specify starting row and column and then ending row and column
+}
+*/
+
+div.relative{
+    border:5px solid blue;
+    width:50%;
+    font-size: 30px;
+    position: relative;
+    left: 80px;
+    top:50px;
+    height: 200px;
+    z-index:-1;
+}
+
+div.absolute{
+    width: 50%;
+    border: 2px double red;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+/* The remaining content will overflow if the there are no sufficent height */
+/* To hide the overflowing of the content we can hide it (line 70) */
+div.overflow{
+    background-color: chocolate;
+    font-size: 20px;
+    width:200px;
+    height: 150px;
+    /* overflow: hidden; */
+    /* overflow: scroll; */
+}
+
+img{
+    
+    position: absolute;
+    /* clip: rect(50px, 150px, 150px, 50px); */
+    z-index: -1;
+}
